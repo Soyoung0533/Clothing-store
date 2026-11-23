@@ -7,9 +7,7 @@
   <meta name="description" content="PRIDE - 당신의 일상을 더 우아하게 만드는 프리미엄 여성 패션">
   <title>PRIDE | Premium Women's Fashion</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
-  <script src="./db.js" defer></script>
-  <script src="./script.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="top-strip"><span>신규 회원 가입 혜택 <b>3,000P</b> · 등급별 최대 <b>7%</b> 적립</span><div id="accountLinks"><button data-view="login">로그인</button><span>|</span><button data-view="signup">회원가입</button></div></div>
@@ -49,7 +47,7 @@
     </section>
     <section class="brand-banner wrap"><div><span>THE ART OF EVERYDAY</span><h2>Elegance is an attitude.</h2><p>당신만의 분위기를 완성하는 가장 아름다운 선택.</p><button class="gold-button" data-view="products">PRIDE COLLECTION <span>→</span></button></div></section>
   </main>
-  <footer class="site-footer"><div class="footer-brand">PRIDE</div><div class="footer-copy"><b>PRIDE PREMIUM WOMEN'S FASHION</b><p>본 페이지는 경영데이터베이스및실습 수업을 위한 쇼핑몰 체험 사이트입니다.</p><p>실제 결제는 진행되지 않으며, 주문 내역은 Supabase에 저장됩니다.</p><small>© 2026 PRIDE. ALL RIGHTS RESERVED.</small></div><button class="to-top" id="toTop" aria-label="맨 위로">↑</button></footer>
+  <footer class="site-footer"><div class="footer-brand">PRIDE</div><div class="footer-copy"><b>PRIDE PREMIUM WOMEN'S FASHION</b><p>본 페이지는 경영데이터베이스및실습 수업을 위한 쇼핑몰 체험 사이트입니다.</p><p>실제 결제는 진행되지 않으며, 주문 및 회원 정보는 현재 사용 중인 브라우저에 저장됩니다.</p><small>© 2026 PRIDE. ALL RIGHTS RESERVED.</small></div><button class="to-top" id="toTop" aria-label="맨 위로">↑</button></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="닫기">×</button><div id="modalContent"></div></div></div>
 </body>
