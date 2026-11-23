@@ -1,28 +1,52 @@
 /* PRIDE 쇼핑몰 데이터: 추후 데이터베이스 테이블로 옮기기 쉽도록 상단에 모았습니다. */
 const PRODUCTS = [
-  { id: 1, name: "골드 버튼 트위드 자켓", category: "아우터", price: 199000, stock: 18, image: "img/products/outer1.svg", tag: "BEST", description: "섬세한 트위드 텍스처와 은은한 골드 버튼이 돋보이는 클래식 자켓입니다." },
-  { id: 2, name: "클래식 플레어 원피스", category: "원피스", price: 179000, stock: 12, image: "img/products/dress1.svg", tag: "BEST", description: "허리선을 자연스럽게 잡아주는 실루엣으로 우아한 분위기를 완성합니다." },
-  { id: 3, name: "실크 블라우스", category: "블라우스", price: 129000, stock: 25, image: "img/products/blouse1.svg", tag: "NEW", description: "부드러운 광택과 가벼운 착용감이 매력적인 데일리 블라우스입니다." },
-  { id: 4, name: "프리미엄 롱 코트", category: "아우터", price: 299000, stock: 8, image: "img/products/outer2.svg", tag: "SIGNATURE", description: "정제된 테일러링과 여유로운 핏으로 오래도록 입기 좋은 코트입니다." },
-  { id: 5, name: "새틴 슬립 원피스", category: "원피스", price: 159000, stock: 14, image: "img/products/dress2.svg", tag: "NEW", description: "차분하게 흐르는 새틴 소재가 특별한 날의 룩을 완성해 줍니다." },
-  { id: 6, name: "타이 디테일 블라우스", category: "블라우스", price: 119000, stock: 20, image: "img/products/blouse2.svg", tag: "", description: "목선을 따라 자연스럽게 떨어지는 타이 디테일이 포인트입니다." },
-  { id: 7, name: "모던 니트 셋업", category: "셋업", price: 189000, stock: 10, image: "img/products/etc1.svg", tag: "", description: "편안한 니트 소재와 단정한 디자인으로 활용도가 높은 셋업입니다." },
-  { id: 8, name: "골드 포인트 스커트", category: "셋업", price: 109000, stock: 16, image: "img/products/etc2.svg", tag: "", description: "절제된 라인과 작은 골드 장식으로 세련된 포인트를 더했습니다." }
+  { id: 1, name: "골드 버튼 트위드 자켓", category: "OUTERWEAR", price: 199000, image: "img/products/outer1.jpg", tag: "BEST", description: "섬세한 트위드 텍스처와 은은한 골드 버튼이 돋보이는 클래식 자켓입니다.", variants: [
+    { id: "1-IV-S", color: "아이보리", size: "S", stock: 5 }, { id: "1-IV-M", color: "아이보리", size: "M", stock: 6 }, { id: "1-IV-L", color: "아이보리", size: "L", stock: 3 }, { id: "1-NV-S", color: "네이비", size: "S", stock: 2 }, { id: "1-NV-M", color: "네이비", size: "M", stock: 2 }
+  ] },
+  { id: 2, name: "클래식 플레어 원피스", category: "DRESSES", price: 179000, image: "img/products/dress1.jpg", tag: "BEST", description: "허리선을 자연스럽게 잡아주는 실루엣으로 우아한 분위기를 완성합니다.", variants: [
+    { id: "2-BK-S", color: "블랙", size: "S", stock: 3 }, { id: "2-BK-M", color: "블랙", size: "M", stock: 4 }, { id: "2-BK-L", color: "블랙", size: "L", stock: 2 }, { id: "2-BG-M", color: "베이지", size: "M", stock: 3 }
+  ] },
+  { id: 3, name: "실크 블라우스", category: "BLOUSES", price: 129000, image: "img/products/blouse1.jpg", tag: "NEW", description: "부드러운 광택과 가벼운 착용감이 매력적인 데일리 블라우스입니다.", variants: [
+    { id: "3-WH-S", color: "화이트", size: "S", stock: 8 }, { id: "3-WH-M", color: "화이트", size: "M", stock: 7 }, { id: "3-WH-L", color: "화이트", size: "L", stock: 4 }, { id: "3-BG-M", color: "베이지", size: "M", stock: 6 }
+  ] },
+  { id: 4, name: "프리미엄 롱 코트", category: "OUTERWEAR", price: 299000, image: "img/products/outer2.jpg", tag: "SIGNATURE", description: "정제된 테일러링과 여유로운 핏으로 오래도록 입기 좋은 코트입니다.", variants: [
+    { id: "4-BG-S", color: "베이지", size: "S", stock: 2 }, { id: "4-BG-M", color: "베이지", size: "M", stock: 3 }, { id: "4-BG-L", color: "베이지", size: "L", stock: 1 }, { id: "4-BK-M", color: "블랙", size: "M", stock: 2 }
+  ] },
+  { id: 5, name: "새틴 슬립 원피스", category: "DRESSES", price: 159000, image: "img/products/dress2.jpg", tag: "NEW", description: "차분하게 흐르는 새틴 소재가 특별한 날의 룩을 완성해 줍니다.", variants: [
+    { id: "5-CH-S", color: "샴페인", size: "S", stock: 4 }, { id: "5-CH-M", color: "샴페인", size: "M", stock: 5 }, { id: "5-CH-L", color: "샴페인", size: "L", stock: 2 }, { id: "5-BK-M", color: "블랙", size: "M", stock: 3 }
+  ] },
+  { id: 6, name: "타이 디테일 블라우스", category: "BLOUSES", price: 119000, image: "img/products/blouse2.jpg", tag: "", description: "목선을 따라 자연스럽게 떨어지는 타이 디테일이 포인트입니다.", variants: [
+    { id: "6-WH-S", color: "화이트", size: "S", stock: 5 }, { id: "6-WH-M", color: "화이트", size: "M", stock: 6 }, { id: "6-BK-M", color: "블랙", size: "M", stock: 4 }, { id: "6-BK-L", color: "블랙", size: "L", stock: 5 }
+  ] },
+  { id: 7, name: "모던 니트 셋업", category: "SETS", price: 189000, image: "img/products/etc1.jpg", tag: "", description: "편안한 니트 소재와 단정한 디자인으로 활용도가 높은 셋업입니다.", variants: [
+    { id: "7-CR-S", color: "크림", size: "S", stock: 2 }, { id: "7-CR-M", color: "크림", size: "M", stock: 3 }, { id: "7-CR-L", color: "크림", size: "L", stock: 2 }, { id: "7-GY-M", color: "그레이", size: "M", stock: 3 }
+  ] },
+  { id: 8, name: "골드 포인트 스커트", category: "SETS", price: 109000, image: "img/products/etc2.jpg", tag: "", description: "절제된 라인과 작은 골드 장식으로 세련된 포인트를 더했습니다.", variants: [
+    { id: "8-BK-S", color: "블랙", size: "S", stock: 4 }, { id: "8-BK-M", color: "블랙", size: "M", stock: 5 }, { id: "8-BK-L", color: "블랙", size: "L", stock: 3 }, { id: "8-BG-M", color: "베이지", size: "M", stock: 4 }
+  ] }
 ];
+// 상품별 색상·사이즈·재고는 DB의 PRODUCT_VARIANTS(상품옵션) 테이블로 분리합니다.
+
 const MEMBER_GRADES = [
   { name: "WELCOME", minPoint: 0, rate: 0.01 },
   { name: "SILVER", minPoint: 100000, rate: 0.03 },
   { name: "GOLD", minPoint: 300000, rate: 0.05 },
   { name: "PRIDE", minPoint: 700000, rate: 0.07 }
 ];
-const CATEGORIES = ["전체", "원피스", "아우터", "블라우스", "셋업"];
+const CATEGORIES = ["ALL", "DRESSES", "OUTERWEAR", "BLOUSES", "SETS"];
 const STORAGE = { users: "pride_users", current: "pride_current_user", cart: "pride_cart", orders: "pride_orders" };
 const money = value => new Intl.NumberFormat("ko-KR").format(value) + "원";
 const read = (key, fallback) => { try { const value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback; } catch { return fallback; } };
 const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 let users = read(STORAGE.users, []), currentUserId = read(STORAGE.current, null);
 let cart = read(STORAGE.cart, []), orders = read(STORAGE.orders, []);
-let activeCategory = "전체", searchKeyword = "", slideIndex = 0, slideTimer = null, toastTimer = null, detailQty = 1, mypageTab = "orders";
+// 이전 버전 장바구니 데이터에 옵션 ID가 없으면 첫 번째 옵션으로 호환 처리합니다.
+cart = cart.map(item => {
+  if (item.variantId) return item;
+  const product = PRODUCTS.find(p => p.id === item.productId);
+  return product ? { ...item, variantId: product.variants[0].id } : item;
+});
+let activeCategory = "ALL", searchKeyword = "", slideIndex = 0, slideTimer = null, toastTimer = null, detailQty = 1, mypageTab = "orders";
 const app = document.getElementById("app");
 const $ = selector => document.querySelector(selector);
 const currentUser = () => users.find(user => user.id === currentUserId) || null;
@@ -47,11 +71,12 @@ function startSlides() {
   clearInterval(slideTimer); slideTimer = setInterval(() => showSlide((slideIndex + 1) % slides.length), 6000);
 }
 function showSlide(index) { const slides = [...document.querySelectorAll(".hero-slide")]; if (!slides.length) return; slideIndex = (index + slides.length) % slides.length; slides.forEach((slide, i) => slide.classList.toggle("active", i === slideIndex)); document.querySelectorAll("[data-slide]").forEach((dot, i) => dot.classList.toggle("active", i === slideIndex)); }
+function productStock(product) { return product.variants.reduce((sum, variant) => sum + variant.stock, 0); }
 function productCard(product) { return `<article class="product-card" data-product="${product.id}" tabindex="0" aria-label="${safe(product.name)} 상세 보기"><div class="product-image"><img src="${product.image}" alt="${safe(product.name)}" loading="lazy">${product.tag?`<span class="product-tag">${safe(product.tag)}</span>`:""}</div><div class="product-info"><span class="product-category">${safe(product.category)}</span><div class="product-name">${safe(product.name)}</div><div class="product-price">${money(product.price)}</div><div class="product-desc">PRIDE PREMIUM COLLECTION</div></div></article>`; }
 function renderHome() {
   app.innerHTML = `<section class="hero" id="hero" aria-label="PRIDE 메인 배너"><div class="hero-slides" id="heroSlides"></div><button class="slide-arrow prev" id="prevSlide" data-action="slide-prev" aria-label="이전 배너">‹</button><button class="slide-arrow next" id="nextSlide" data-action="slide-next" aria-label="다음 배너">›</button><div class="slide-dots" id="slideDots"></div></section><section class="benefits wrap"><div><span class="benefit-icon">◇</span><p><b>FREE SHIPPING</b><small>5만원 이상 무료배송</small></p></div><div><span class="benefit-icon">♧</span><p><b>WELCOME POINT</b><small>신규 가입 시 3,000P</small></p></div><div><span class="benefit-icon">♕</span><p><b>MEMBERSHIP</b><small>등급별 최대 7% 적립</small></p></div><div><span class="benefit-icon">♡</span><p><b>PRIDE SERVICE</b><small>언제나 세심한 스타일링</small></p></div></section><section class="category-section wrap"><div class="section-heading"><span>CURATED FOR YOU</span><h2>SHOP BY CATEGORY</h2><p>일상에 우아함을 더하는 PRIDE의 셀렉션</p></div><div class="category-grid" id="categoryGrid"></div></section><section class="products-section wrap"><div class="section-heading"><span>THE PRIDE EDIT</span><h2>BEST COLLECTION</h2><p>지금 가장 사랑받는 아이템을 만나보세요.</p></div><div class="product-grid" id="homeProducts"></div><button class="outline-button center-button" data-view="products">전체 상품 보기 <span>→</span></button></section><section class="brand-banner wrap"><div><span>THE ART OF EVERYDAY</span><h2>Elegance is an attitude.</h2><p>당신만의 분위기를 완성하는 가장 아름다운 선택.</p><button class="gold-button" data-view="products">PRIDE COLLECTION <span>→</span></button></div></section>`;
   startSlides();
-  const categoryImages = { "원피스":"img/products/dress1.svg", "아우터":"img/products/outer1.svg", "블라우스":"img/products/blouse1.svg", "셋업":"img/products/etc1.svg" };
+  const categoryImages = { "DRESSES":"img/products/dress1.jpg", "OUTERWEAR":"img/products/outer1.jpg", "BLOUSES":"img/products/blouse1.jpg", "SETS":"img/products/etc1.jpg" };
   $("#categoryGrid").innerHTML = CATEGORIES.slice(1).map(category => `<article class="category-card" data-category="${category}"><img src="${categoryImages[category]}" alt="${category}" loading="lazy"><div><b>${category}</b><span>DISCOVER　→</span></div></article>`).join("");
   $("#homeProducts").innerHTML = PRODUCTS.slice(0, 4).map(productCard).join("");
 }
@@ -60,52 +85,62 @@ function renderProducts() {
   drawProductList();
 }
 function drawProductList() {
-  let list = PRODUCTS.filter(p => (activeCategory === "전체" || p.category === activeCategory) && p.name.toLowerCase().includes(searchKeyword.toLowerCase()));
+  let list = PRODUCTS.filter(p => (activeCategory === "ALL" || p.category === activeCategory) && p.name.toLowerCase().includes(searchKeyword.toLowerCase()));
   const sort = $("#sortProducts")?.value; if(sort === "low") list.sort((a,b)=>a.price-b.price); if(sort === "high") list.sort((a,b)=>b.price-a.price); if(sort === "name") list.sort((a,b)=>a.name.localeCompare(b.name,"ko"));
   $("#resultCount").textContent = `TOTAL ${list.length} ITEMS`;
   $("#allProducts").innerHTML = list.length ? list.map(productCard).join("") : `<div class="empty-state" style="grid-column:1/-1"><b>검색 결과가 없습니다.</b>다른 검색어를 입력해 주세요.</div>`;
 }
 function renderDetail(id) {
   const p = PRODUCTS.find(item=>item.id===Number(id)); if(!p) return navigate("products"); detailQty=1;
-  app.innerHTML = `<section class="page-shell"><div class="page-title"><span>PRIDE COLLECTION</span><h1>PRODUCT DETAIL</h1></div><div class="detail-layout"><div class="detail-image"><img src="${p.image}" alt="${safe(p.name)}"></div><div class="detail-copy"><span class="product-category">${safe(p.category)}</span><h1>${safe(p.name)}</h1><div class="detail-price">${money(p.price)}</div><div class="detail-description">${safe(p.description)}<br><br>고급스러운 소재와 섬세한 디테일로 완성한 PRIDE의 시그니처 아이템입니다.</div><div class="detail-row"><span>배송</span><span>5만원 이상 무료배송</span></div><div class="detail-row"><span>적립</span><span>회원 등급별 1~7% 적립</span></div><div class="detail-row"><span>재고</span><span>${p.stock}개</span></div><div class="qty-control"><button data-action="detail-minus">−</button><span id="detailQty">1</span><button data-action="detail-plus">＋</button></div><div class="action-row"><button class="secondary-button" data-action="add-cart" data-id="${p.id}">장바구니 담기</button><button class="primary-button" data-action="buy-now" data-id="${p.id}">바로 구매</button></div></div></div></section>`;
+  const colors = [...new Set(p.variants.map(v=>v.color))];
+  const firstColor = colors[0];
+  const sizes = p.variants.filter(v=>v.color===firstColor);
+  app.innerHTML = `<section class="page-shell"><div class="page-title"><span>PRIDE COLLECTION</span><h1>PRODUCT DETAIL</h1></div><div class="detail-layout"><div class="detail-image"><img src="${p.image}" alt="${safe(p.name)}"></div><div class="detail-copy"><span class="product-category">${safe(p.category)}</span><h1>${safe(p.name)}</h1><div class="detail-price">${money(p.price)}</div><div class="detail-description">${safe(p.description)}<br><br>고급스러운 소재와 섬세한 디테일로 완성한 PRIDE의 시그니처 아이템입니다.</div><div class="detail-row"><span>배송</span><span>5만원 이상 무료배송</span></div><div class="detail-row"><span>적립</span><span>회원 등급별 1~7% 적립</span></div><div class="option-field"><label for="variantColor">COLOR</label><select id="variantColor">${colors.map(c=>`<option value="${safe(c)}">${safe(c)}</option>`).join("")}</select></div><div class="option-field"><label for="variantSize">SIZE</label><select id="variantSize">${sizes.map(v=>`<option value="${v.id}">${v.size} (재고 ${v.stock}개)</option>`).join("")}</select></div><div class="detail-row"><span>선택 옵션 재고</span><span id="variantStock">${sizes[0].stock}개</span></div><div class="qty-control"><button data-action="detail-minus">−</button><span id="detailQty">1</span><button data-action="detail-plus">＋</button></div><div class="action-row"><button class="secondary-button" data-action="add-cart" data-id="${p.id}">장바구니 담기</button><button class="primary-button" data-action="buy-now" data-id="${p.id}">바로 구매</button></div></div></div></section>`;
 }
+
 function renderCart() {
   const items = cart.map(item=>({...item, product:PRODUCTS.find(p=>p.id===item.productId)})).filter(item=>item.product);
   const subtotal = items.reduce((sum,item)=>sum+item.product.price*item.qty,0);
-  app.innerHTML = `<section class="page-shell"><div class="page-title"><span>YOUR SELECTION</span><h1>SHOPPING BAG</h1></div>${items.length?`<table class="cart-table"><thead><tr><th>상품 정보</th><th>가격</th><th>수량</th><th>합계</th><th></th></tr></thead><tbody>${items.map(item=>`<tr><td><div class="cart-product"><img src="${item.product.image}" alt=""><div><b>${safe(item.product.name)}</b><small>${safe(item.product.category)}</small></div></div></td><td>${money(item.product.price)}</td><td><div class="cart-qty"><button data-action="cart-minus" data-id="${item.productId}">−</button><span>${item.qty}</span><button data-action="cart-plus" data-id="${item.productId}">＋</button></div></td><td>${money(item.product.price*item.qty)}</td><td><button class="delete-btn" data-action="cart-delete" data-id="${item.productId}" aria-label="상품 삭제">×</button></td></tr>`).join("")}</tbody></table><div class="cart-summary"><div class="summary-line"><span>상품 금액</span><b>${money(subtotal)}</b></div><div class="summary-line"><span>배송비</span><b>${subtotal>=50000?"무료":money(subtotal?3000:0)}</b></div><div class="summary-line summary-total"><span>총 결제 예정 금액</span><b>${money(subtotal+(subtotal>=50000||!subtotal?0:3000))}</b></div><button class="primary-button" data-action="checkout">체험 결제하기</button></div>`:`<div class="empty-state"><b>장바구니가 비어 있습니다.</b>마음에 드는 상품을 담아보세요.<br><button class="outline-button" style="margin-top:20px" data-view="products">쇼핑 계속하기</button></div>`}</section>`;
+  app.innerHTML = `<section class="page-shell"><div class="page-title"><span>YOUR SELECTION</span><h1>SHOPPING BAG</h1></div>${items.length?`<table class="cart-table"><thead><tr><th>상품 정보</th><th>가격</th><th>수량</th><th>합계</th><th></th></tr></thead><tbody>${items.map(item=>{const variant=item.product.variants.find(v=>v.id===item.variantId);return `<tr><td><div class="cart-product"><img src="${item.product.image}" alt=""><div><b>${safe(item.product.name)}</b><small>${safe(item.product.category)} · ${safe(variant?.color||"옵션 미지정")} / ${safe(variant?.size||"")}</small></div></div></td><td>${money(item.product.price)}</td><td><div class="cart-qty"><button data-action="cart-minus" data-id="${item.productId}" data-variant="${item.variantId}">−</button><span>${item.qty}</span><button data-action="cart-plus" data-id="${item.productId}" data-variant="${item.variantId}">＋</button></div></td><td>${money(item.product.price*item.qty)}</td><td><button class="delete-btn" data-action="cart-delete" data-id="${item.productId}" data-variant="${item.variantId}" aria-label="상품 삭제">×</button></td></tr>`;}).join("")}</tbody></table><div class="cart-summary"><div class="summary-line"><span>상품 금액</span><b>${money(subtotal)}</b></div><div class="summary-line"><span>배송비</span><b>${subtotal>=50000?"무료":money(subtotal?3000:0)}</b></div><div class="summary-line summary-total"><span>총 결제 예정 금액</span><b>${money(subtotal+(subtotal>=50000||!subtotal?0:3000))}</b></div><button class="primary-button" data-action="checkout">체험 결제하기</button></div>`:`<div class="empty-state"><b>장바구니가 비어 있습니다.</b>마음에 드는 상품을 담아보세요.<br><button class="outline-button" style="margin-top:20px" data-view="products">쇼핑 계속하기</button></div>`}</section>`;
 }
+
 function renderAuth(mode) {
   const signup = mode === "signup";
   app.innerHTML = `<section class="page-shell"><div class="page-title"><span>WELCOME TO PRIDE</span><h1>${signup?"CREATE ACCOUNT":"MEMBER LOGIN"}</h1></div><form class="form-card" id="authForm"><h2>${signup?"회원가입":"로그인"}</h2>${signup?`<div class="form-field"><label for="name">이름</label><input id="name" name="name" required maxlength="20" placeholder="이름을 입력하세요"></div>`:""}<div class="form-field"><label for="email">이메일</label><input id="email" name="email" type="email" required placeholder="example@email.com"></div><div class="form-field"><label for="password">비밀번호</label><input id="password" name="password" type="password" required minlength="4" placeholder="${signup?"4자 이상 입력하세요":"비밀번호를 입력하세요"}"></div>${signup?`<div class="notice">가입 즉시 3,000P가 지급됩니다. (체험용 계정 정보는 현재 브라우저에 저장됩니다.)</div>`:""}<button class="primary-button" type="submit">${signup?"3,000P 받고 가입하기":"로그인"}</button><p class="form-note">${signup?`이미 회원이신가요? <button type="button" data-view="login">로그인</button>`:`아직 회원이 아니신가요? <button type="button" data-view="signup">회원가입</button>`}</p></form></section>`;
 }
 function renderMypage(tab=mypageTab) {
   const user=currentUser(); if(!user) return navigate("login"); mypageTab=tab; const grade=getGrade(user);
-  const content = tab === "orders" ? (orders.filter(o=>o.userId===user.id).length ? orders.filter(o=>o.userId===user.id).slice().reverse().map(o=>`<div class="order-item"><div><b>주문번호 ${safe(o.id)}</b><small>${new Date(o.date).toLocaleString("ko-KR")} · ${o.items.map(i=>safe(i.name)).join(", ")}</small></div><div><b>${money(o.total)}</b><small class="order-status">${safe(o.status)}</small></div></div>`).join("") : `<div class="empty-state"><b>아직 주문 내역이 없습니다.</b>첫 쇼핑을 시작해 보세요.</div>`) : `<div class="notice">회원 등급은 누적 구매 금액을 기준으로 적용됩니다. 등급별 적립률은 다음 주문부터 반영됩니다.</div>${MEMBER_GRADES.map(g=>`<div class="order-item"><div><b>${g.name}</b><small>누적 구매 ${money(g.minPoint)} 이상</small></div><b>${Math.round(g.rate*100)}% 적립</b></div>`).join("")}`;
+  const content = tab === "orders" ? (orders.filter(o=>o.userId===user.id).length ? orders.filter(o=>o.userId===user.id).slice().reverse().map(o=>`<div class="order-item"><div><b>주문번호 ${safe(o.id)}</b><small>${new Date(o.date).toLocaleString("ko-KR")} · ${o.items.map(i=>`${safe(i.name)} (${safe(i.color||"옵션 정보 없음")} / ${safe(i.size||"")})`).join(", ")}</small></div><div><b>${money(o.total)}</b><small class="order-status">${safe(o.status)}</small></div></div>`).join("") : `<div class="empty-state"><b>아직 주문 내역이 없습니다.</b>첫 쇼핑을 시작해 보세요.</div>`) : `<div class="notice">회원 등급은 누적 구매 금액을 기준으로 적용됩니다. 등급별 적립률은 다음 주문부터 반영됩니다.</div>${MEMBER_GRADES.map(g=>`<div class="order-item"><div><b>${g.name}</b><small>누적 구매 ${money(g.minPoint)} 이상</small></div><b>${Math.round(g.rate*100)}% 적립</b></div>`).join("")}`;
   app.innerHTML = `<section class="page-shell"><div class="page-title"><span>YOUR PRIDE</span><h1>MY PAGE</h1></div><div class="mypage-grid"><aside class="member-card"><span class="grade">${grade.name} MEMBER</span><div class="member-name">${safe(user.name)} 님</div><div>${safe(user.email)}</div><div class="point-number">${user.points.toLocaleString("ko-KR")} P</div><small>사용 가능 포인트</small><div style="margin-top:20px;font-size:11px;color:#c8d0dc">누적 구매 ${money(user.totalSpent)}<br>현재 적립률 ${Math.round(grade.rate*100)}%</div></aside><div class="mypage-content"><div class="mypage-tabs"><button class="${tab==="orders"?"active":""}" data-tab="orders">주문 내역</button><button class="${tab==="grade"?"active":""}" data-tab="grade">회원 등급 안내</button></div><h3>${tab==="orders"?"ORDER HISTORY":"MEMBERSHIP BENEFIT"}</h3>${content}</div></div></section>`;
 }
 function navigate(view, data) {
   document.querySelectorAll(".nav-link").forEach(link=>link.classList.toggle("active",link.dataset.view===view));
   if(view!=="home") clearInterval(slideTimer);
-  if(view==="home") renderHome(); else if(view==="products") { activeCategory="전체"; searchKeyword=""; renderProducts(); } else if(view==="detail") renderDetail(data); else if(view==="cart") renderCart(); else if(view==="login"||view==="signup") renderAuth(view); else if(view==="mypage") renderMypage();
+  if(view==="home") renderHome(); else if(view==="products") { activeCategory="ALL"; searchKeyword=""; renderProducts(); } else if(view==="detail") renderDetail(data); else if(view==="cart") renderCart(); else if(view==="login"||view==="signup") renderAuth(view); else if(view==="mypage") renderMypage();
   $("#mainNav").classList.remove("open"); window.scrollTo({top:0,behavior:"smooth"}); app.focus({preventScroll:true}); updateHeader();
 }
-function addToCart(id, qty=1) {
+function addToCart(id, qty=1, variantId=null) {
   const product=PRODUCTS.find(p=>p.id===Number(id)); if(!product) return;
-  if(qty>product.stock) return toast("재고 수량을 확인해 주세요.");
-  const found=cart.find(item=>item.productId===product.id); if(found){ if(found.qty+qty>product.stock) return toast("재고 수량을 초과했습니다."); found.qty+=qty; } else cart.push({productId:product.id,qty});
-  persist(); updateHeader(); toast("장바구니에 상품을 담았습니다.");
+  const variant=product.variants.find(v=>v.id===variantId) || product.variants[0];
+  if(!variant) return toast("선택 가능한 옵션이 없습니다.");
+  const found=cart.find(item=>item.productId===product.id && item.variantId===variant.id);
+  if(qty>(variant.stock-(found?.qty||0))) return toast("선택한 색상과 사이즈의 재고가 부족합니다.");
+  if(found) found.qty+=qty; else cart.push({productId:product.id,variantId:variant.id,qty});
+  persist(); updateHeader(); toast("선택한 옵션을 장바구니에 담았습니다.");
 }
-function changeCart(id, delta) { const item=cart.find(i=>i.productId===Number(id)); if(!item) return; const product=PRODUCTS.find(p=>p.id===item.productId); item.qty=Math.max(1,Math.min(product.stock,item.qty+delta)); persist(); renderCart(); updateHeader(); }
+function changeCart(id, variantId, delta) { const item=cart.find(i=>i.productId===Number(id)&&i.variantId===variantId); if(!item) return; const product=PRODUCTS.find(p=>p.id===item.productId), variant=product.variants.find(v=>v.id===variantId); item.qty=Math.max(1,Math.min(variant.stock,item.qty+delta)); persist(); renderCart(); updateHeader(); }
 function checkout() {
   const user=currentUser(); if(!user){toast("주문하려면 먼저 로그인해 주세요."); navigate("login"); return;}
   if(!cart.length) return toast("장바구니가 비어 있습니다.");
-  const items=cart.map(item=>{const p=PRODUCTS.find(product=>product.id===item.productId);return {productId:p.id,name:p.name,price:p.price,qty:item.qty};});
+  const items=cart.map(item=>{const p=PRODUCTS.find(product=>product.id===item.productId), v=p.variants.find(variant=>variant.id===item.variantId);return {productId:p.id,variantId:v.id,name:p.name,color:v.color,size:v.size,price:p.price,qty:item.qty};});
+  for (const item of items) { const product = PRODUCTS.find(p => p.id === item.productId), variant = product.variants.find(v => v.id === item.variantId); if (variant.stock < item.qty) return toast(`${item.name} ${item.color}/${item.size} 재고가 부족합니다.`); }
   const subtotal=items.reduce((sum,item)=>sum+item.price*item.qty,0), shipping=subtotal>=50000?0:3000, total=subtotal+shipping, grade=getGrade(user), earned=Math.floor(total*grade.rate);
   const order={id:"PR"+Date.now().toString().slice(-10),userId:user.id,date:new Date().toISOString(),items,total,status:"체험 주문 완료",earnedPoints:earned};
-  orders.push(order); user.points+=earned; user.totalSpent+=total; cart=[]; persist(); updateHeader();
+  orders.push(order); items.forEach(item => { const product = PRODUCTS.find(p => p.id === item.productId); product.variants.find(v => v.id === item.variantId).stock -= item.qty; }); user.points+=earned; user.totalSpent+=total; cart=[]; persist(); updateHeader();
   app.innerHTML=`<section class="page-shell"><div class="order-complete"><div class="check">✓</div><h2>주문이 완료되었습니다.</h2><p>PRIDE를 이용해 주셔서 감사합니다.</p><div class="notice">주문번호 <b>${order.id}</b><br>주문 금액 ${money(total)}<br>적립 포인트 <b>${earned.toLocaleString("ko-KR")}P</b><br><small>실제 결제는 진행되지 않은 체험 주문입니다.</small></div><button class="primary-button" style="padding:13px 25px" data-view="mypage">주문 내역 확인</button></div></section>`;
   window.scrollTo({top:0,behavior:"smooth"});
 }
+
 document.addEventListener("click", event=>{
   const view=event.target.closest("[data-view]"); if(view){event.preventDefault();navigate(view.dataset.view);return;}
   const category=event.target.closest("[data-category]"); if(category){activeCategory=category.dataset.category;searchKeyword="";navigate("products");activeCategory=category.dataset.category;renderProducts();return;}
@@ -121,12 +156,12 @@ document.addEventListener("click", event=>{
     case "logout":currentUserId=null;persist();updateHeader();toast("로그아웃되었습니다.");navigate("home");break;
     case "search":searchKeyword=$("#productSearch").value.trim();drawProductList();break;
     case "detail-minus":detailQty=Math.max(1,detailQty-1);$("#detailQty").textContent=detailQty;break;
-    case "detail-plus":detailQty=Math.min(PRODUCTS.find(p=>p.id===Number(document.querySelector("[data-action='add-cart']").dataset.id)).stock,detailQty+1);$("#detailQty").textContent=detailQty;break;
-    case "add-cart":addToCart(id,detailQty);break;
-    case "buy-now":addToCart(id,detailQty);navigate("cart");break;
-    case "cart-minus":changeCart(id,-1);break;
-    case "cart-plus":changeCart(id,1);break;
-    case "cart-delete":cart=cart.filter(item=>item.productId!==Number(id));persist();renderCart();updateHeader();toast("상품을 삭제했습니다.");break;
+    case "detail-plus":detailQty=Math.min(Number($("#variantSize").selectedOptions[0]?.textContent.match(/재고 (\d+)개/)?.[1]||1),detailQty+1);$("#detailQty").textContent=detailQty;break;
+    case "add-cart":addToCart(id,detailQty,$("#variantSize").value);break;
+    case "buy-now":addToCart(id,detailQty,$("#variantSize").value);navigate("cart");break;
+    case "cart-minus":changeCart(id,action.dataset.variant,-1);break;
+    case "cart-plus":changeCart(id,action.dataset.variant,1);break;
+    case "cart-delete":cart=cart.filter(item=>!(item.productId===Number(id)&&item.variantId===action.dataset.variant));persist();renderCart();updateHeader();toast("상품을 삭제했습니다.");break;
     case "checkout":checkout();break;
   }
 });
@@ -138,7 +173,19 @@ document.addEventListener("submit", event=>{
   } else {const user=users.find(u=>u.email===email&&u.password===password);if(!user)return toast("이메일 또는 비밀번호를 확인해 주세요.");currentUserId=user.id;persist();updateHeader();toast("로그인되었습니다.");navigate("mypage");}
 });
 document.addEventListener("input",event=>{if(event.target.id==="productSearch"){searchKeyword=event.target.value.trim();drawProductList();}});
-document.addEventListener("change",event=>{if(event.target.id==="sortProducts")drawProductList();});
+document.addEventListener("change",event=>{
+  if(event.target.id==="sortProducts")drawProductList();
+  if(event.target.id==="variantColor"){
+    const productId=Number(document.querySelector("[data-action='add-cart']")?.dataset.id), product=PRODUCTS.find(p=>p.id===productId);
+    const options=product.variants.filter(v=>v.color===event.target.value);
+    $("#variantSize").innerHTML=options.map(v=>`<option value="${v.id}">${v.size} (재고 ${v.stock}개)</option>`).join("");
+    $("#variantStock").textContent=options[0].stock+"개"; detailQty=1; $("#detailQty").textContent="1";
+  }
+  if(event.target.id==="variantSize"){
+    const productId=Number(document.querySelector("[data-action='add-cart']")?.dataset.id), product=PRODUCTS.find(p=>p.id===productId), variant=product.variants.find(v=>v.id===event.target.value);
+    $("#variantStock").textContent=variant.stock+"개"; detailQty=1; $("#detailQty").textContent="1";
+  }
+});
 $("#menuToggle").addEventListener("click",()=>$("#mainNav").classList.toggle("open"));
 $("#toTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 $("#modalClose").addEventListener("click",()=>$("#modalBackdrop").hidden=true); $("#modalBackdrop").addEventListener("click",event=>{if(event.target.id==="modalBackdrop")event.currentTarget.hidden=true;});
